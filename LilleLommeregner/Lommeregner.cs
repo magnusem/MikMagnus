@@ -8,9 +8,9 @@ namespace LilleLommeregner
 {
     class Lommeregner
     {
-        public double userinput1;
-        public string useroperator;
-        public double userinput2;
+        //public double userinput1;
+        //public string useroperator;
+        //public double userinput2;
 
         //public Lommeregner()
         //{
@@ -19,16 +19,27 @@ namespace LilleLommeregner
         //    this.userinput2 = userinput2;
         //}
 
-        public double UserInputPlus()
+        public Double userinput1 { get; set; }
+        public Double userinput2{ get; set; }
+        public string useroperator { get; set; }
+        public double svar { get; set; }
+
+        public void UserInputPlus()
         {
             double sumplus = userinput1 + userinput2;
-            return sumplus;
+            Console.WriteLine(sumplus);
         }
 
-        public double UserInputMinus()
+        public void UserInputMinus()
         {
             double summinus = userinput1 - userinput2;
-            return summinus;
+            Console.WriteLine(summinus);
+        }
+
+        public void UserInputGange()
+        {
+            double sumgange = userinput1 * userinput2;
+            Console.WriteLine(sumgange);
         }
 
         //public double
@@ -42,6 +53,10 @@ namespace LilleLommeregner
             else if (useroperator == "-")
             {
                 UserInputMinus();
+            }
+            else if (useroperator == "*")
+            {
+                UserInputGange();
             }
         }
     }
