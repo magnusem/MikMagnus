@@ -10,6 +10,7 @@ namespace LilleLommeregner
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello");
         }
     }
 }
