@@ -8,16 +8,6 @@ namespace LilleLommeregner
 {
     class Lommeregner
     {
-        //public double userinput1;
-        //public string useroperator;
-        //public double userinput2;
-
-        //public Lommeregner()
-        //{
-        //    this.userinput1 = userinput1;
-        //    this.useroperator = useroperator;
-        //    this.userinput2 = userinput2;
-        //}
 
         public Double userinput1 { get; set; }
         public Double userinput2{ get; set; }
@@ -26,24 +16,25 @@ namespace LilleLommeregner
 
         public Double UserInputPlus()
         {
-            double sumplus = userinput1 + userinput2;
-            return sumplus;
+            return userinput1 + userinput2;
         }
 
         public Double UserInputMinus()
         {
-            double summinus = userinput1 - userinput2;
-            return summinus;
-
+            return userinput1 - userinput2;
         }
 
         public Double UserInputGange()
         {
-            double sumgange = userinput1 * userinput2;
-            return sumgange;
+            return userinput1 * userinput2;
+            
         }
 
-        //public double
+        public Double UserInputDiv()
+        {
+            return userinput1 / userinput2;
+        }
+
 
         public void ChoseOperator()
         {
@@ -60,12 +51,15 @@ namespace LilleLommeregner
             {
                 svar = UserInputGange();
             }
-
+            else if ( useroperator == "/")
+            {
+                svar = UserInputDiv();
+            }
             
         }
         public void print()
         {
-            Console.WriteLine(svar);
+            Console.Write(svar);
         }
     }
 }

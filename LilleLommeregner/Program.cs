@@ -11,12 +11,12 @@ namespace LilleLommeregner
         static void Main(string[] args)
         {
             Lommeregner l1 = new Lommeregner();
-            Console.WriteLine("HEJ");
             bool sandt = true;
             while (sandt)
             {
                 Console.Clear();
-                Console.WriteLine("Tal 1");
+
+                Console.WriteLine("Skriv et tal");
                 string input1 = Console.ReadLine();
                 if (input1 == "stop")
                 {
@@ -27,7 +27,7 @@ namespace LilleLommeregner
 
 
 
-                Console.WriteLine("hvad vil du gerne +-*");
+                Console.WriteLine("hvad vil du gerne + - * /");
                 string useroperator = Console.ReadLine();
                 if (useroperator == "stop")
                 {
@@ -36,7 +36,7 @@ namespace LilleLommeregner
                 l1.useroperator = useroperator;
 
 
-                Console.WriteLine("Tal 2");
+                Console.WriteLine("skriv det andet tal");
                 string input2 = Console.ReadLine();
                 if (input2 == "stop")
                 {
@@ -46,8 +46,11 @@ namespace LilleLommeregner
                 l1.userinput2 = userinput2;
                 l1.ChoseOperator();
                 Console.Clear();
-                Console.WriteLine("det giver sgu da");
+                Console.WriteLine($"{l1.userinput1} {l1.useroperator} {l1.userinput2} ");
+                Console.WriteLine("=");
                 l1.print();
+                Console.WriteLine();
+                Console.WriteLine("\nhvis du ønsker at stoppe skriv \"stop\"");
                 Console.ReadKey();
             }
 
