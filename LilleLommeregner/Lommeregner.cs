@@ -24,22 +24,23 @@ namespace LilleLommeregner
         public string useroperator { get; set; }
         public double svar { get; set; }
 
-        public void UserInputPlus()
+        public Double UserInputPlus()
         {
             double sumplus = userinput1 + userinput2;
-            Console.WriteLine(sumplus);
+            return sumplus;
         }
 
-        public void UserInputMinus()
+        public Double UserInputMinus()
         {
             double summinus = userinput1 - userinput2;
-            Console.WriteLine(summinus);
+            return summinus;
+
         }
 
-        public void UserInputGange()
+        public Double UserInputGange()
         {
             double sumgange = userinput1 * userinput2;
-            Console.WriteLine(sumgange);
+            return sumgange;
         }
 
         //public double
@@ -48,16 +49,23 @@ namespace LilleLommeregner
         {
             if (useroperator == "+")
             {
-                UserInputPlus();
+                svar = UserInputPlus();
+
             }
             else if (useroperator == "-")
             {
-                UserInputMinus();
+                svar = UserInputMinus();
             }
             else if (useroperator == "*")
             {
-                UserInputGange();
+                svar = UserInputGange();
             }
+
+            
+        }
+        public void print()
+        {
+            Console.WriteLine(svar);
         }
     }
 }

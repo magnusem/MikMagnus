@@ -14,18 +14,21 @@ namespace LilleLommeregner
 
             Console.WriteLine("Tal 1");
             string input1 = Console.ReadLine();
-            double userinput1 = Int32.Parse(input1);
+            double userinput1 = Double.Parse(input1);
+            l1.userinput1 = userinput1;
 
 
             Console.WriteLine("hvad vil du gerne +-*");
             string useroperator = Console.ReadLine();
-            l1.ChoseOperator();
+            l1.useroperator = useroperator;
+
 
             Console.WriteLine("Tal 2");
             string input2 = Console.ReadLine();
-            double userinput2 = Int32.Parse(input2);
-
-            Console.WriteLine();
+            double userinput2 = Double.Parse(input2);
+            l1.userinput2 = userinput2;
+            l1.ChoseOperator();
+            l1.print();
 
             Console.ReadKey();
             
