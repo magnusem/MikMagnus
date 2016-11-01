@@ -28,6 +28,8 @@ namespace LilleLommeregner
             double userinput2 = Double.Parse(input2);
             l1.userinput2 = userinput2;
             l1.ChoseOperator();
+            Console.Clear();
+            Console.WriteLine("det giver sgu da");
             l1.print();
 
             Console.ReadKey();
