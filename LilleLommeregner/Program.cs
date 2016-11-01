@@ -11,26 +11,46 @@ namespace LilleLommeregner
         static void Main(string[] args)
         {
             Lommeregner l1 = new Lommeregner();
+            Console.WriteLine("HEJ");
+            bool sandt = true;
+            while (sandt)
+            {
+                Console.Clear();
+                Console.WriteLine("Tal 1");
+                string input1 = Console.ReadLine();
+                if (input1 == "stop")
+                {
+                    break;
+                }
+                double userinput1 = Double.Parse(input1);
+                l1.userinput1 = userinput1;
 
-            Console.WriteLine("Tal 1");
-            string input1 = Console.ReadLine();
-            double userinput1 = Double.Parse(input1);
-            l1.userinput1 = userinput1;
 
 
-            Console.WriteLine("hvad vil du gerne +-*");
-            string useroperator = Console.ReadLine();
-            l1.useroperator = useroperator;
+                Console.WriteLine("hvad vil du gerne +-*");
+                string useroperator = Console.ReadLine();
+                if (useroperator == "stop")
+                {
+                    break;
+                }
+                l1.useroperator = useroperator;
 
 
-            Console.WriteLine("Tal 2");
-            string input2 = Console.ReadLine();
-            double userinput2 = Double.Parse(input2);
-            l1.userinput2 = userinput2;
-            l1.ChoseOperator();
-            Console.Clear();
-            Console.WriteLine("det giver sgu da");
-            l1.print();
+                Console.WriteLine("Tal 2");
+                string input2 = Console.ReadLine();
+                if (input2 == "stop")
+                {
+                    break;
+                }
+                double userinput2 = Double.Parse(input2);
+                l1.userinput2 = userinput2;
+                l1.ChoseOperator();
+                Console.Clear();
+                Console.WriteLine("det giver sgu da");
+                l1.print();
+                Console.ReadKey();
+            }
+
 
             Console.ReadKey();
             
