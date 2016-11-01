@@ -8,17 +8,16 @@ namespace LilleLommeregner
 {
     class Lommeregner
     {
-        private double userinput1;
-        private string useroperator;
-        private double userinput2;
+        public double userinput1;
+        public string useroperator;
+        public double userinput2;
 
-
-        public Lommeregner(double userinput1, string useroperator, double userinput2)
-        {
-            this.userinput1 = userinput1;
-            this.useroperator = useroperator;
-            this.userinput2 = userinput2;
-        }
+        //public Lommeregner()
+        //{
+        //    this.userinput1 = userinput1;
+        //    this.useroperator = useroperator;
+        //    this.userinput2 = userinput2;
+        //}
 
         public double UserInputPlus()
         {
